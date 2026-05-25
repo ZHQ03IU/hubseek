@@ -153,7 +153,7 @@ class GitHubClient:
             forks=repo_data["forks_count"],
             language=repo_data.get("language"),
             topics=repo_data.get("topics", []),
-            last_update=repo_data["updated_at"],
+            last_update=repo_data["pushed_at"],
             readme=readme,
             open_issues=repo_data["open_issues_count"],
             license=repo_data.get("license", {}).get("spdx_id") if repo_data.get("license") else None
